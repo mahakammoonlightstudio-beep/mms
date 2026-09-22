@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahakam Moonlight Studio — Tempat Imajinasi Mengalir</title>
+
+    <meta name="description" content="Situs web resmi Mahakam Moonlight Studio — studio kreatif indie untuk game design, storytelling, dan pengembangan web. Tempat imajinasi mengalir.">
+    <meta name="theme-color" content="#14151d">
+    <meta name="author" content="Mahakam Moonlight Studio">
+    <link rel="canonical" href="https://mahakam-moonlight-studio.page.gd/">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <meta property="og:site_name" content="Mahakam Moonlight Studio">
+    <meta property="og:title" content="Mahakam Moonlight Studio">
+    <meta property="og:description" content="Situs web resmi Mahakam Moonlight Studio - Tempat imajinasi mengalir.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahakam-moonlight-studio.page.gd/">
+    <meta name="twitter:title" content="Mahakam Moonlight Studio">
+    <meta name="twitter:description" content="Situs web resmi Mahakam Moonlight Studio - Tempat imajinasi mengalir.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mahakam Moonlight Studio",
+      "url": "https://mahakam-moonlight-studio.page.gd/"
+    }
+    </script>
+
+    <script>
+        // Terapkan tema sebelum paint — gelap adalah identitas bawaan studio
+        (function () {
+            var t = localStorage.getItem('mms-theme');
+            if (t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-[var(--bg)] text-[var(--fg)] antialiased">
+
+    <a href="#konten" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-[var(--fg)] focus:text-[var(--bg)] focus:px-4 focus:py-2 focus:text-sm" data-id="Lewati ke konten" data-en="Skip to content">Lewati ke konten</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="sticky top-0 z-40 border-b border-[var(--line-c)] bg-[var(--bg)]/92 backdrop-blur-sm no-print">
+        <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+            <a href="#konten" class="flex items-center gap-3">
+                <img src="logo.png" alt="Logo Mahakam Moonlight Studio" width="36" height="36" class="h-9 w-9 rounded-full object-cover">
+                <span class="font-display text-xl leading-none">Mahakam Moonlight Studio</span>
+            </a>
+
+            <nav class="hidden items-center gap-7 md:flex" aria-label="Navigasi utama">
+                <a href="#tentang"     class="nav-underline text-sm font-medium text-[var(--fg-dim)] hover:text-[var(--fg)] transition-colors" data-id="Tentang"     data-en="About">Tentang</a>
+                <a href="#proyek"      class="nav-underline text-sm font-medium text-[var(--fg-dim)] hover:text-[var(--fg)] transition-colors" data-id="Proyek"      data-en="Work">Proyek</a>
+                <a href="#perjalanan"  class="nav-underline text-sm font-medium text-[var(--fg-dim)] hover:text-[var(--fg)] transition-colors" data-id="Perjalanan"  data-en="Journey">Perjalanan</a>
+                <a href="#kontak"      class="nav-underline text-sm font-medium text-[var(--fg-dim)] hover:text-[var(--fg)] transition-colors" data-id="Kontak"      data-en="Contact">Kontak</a>
+            </nav>
+
+            <div class="flex items-center gap-1.5">
+                <button id="langToggle" class="rounded border border-[var(--line-c)] px-3 py-1.5 font-mono text-xs font-medium text-[var(--fg-dim)] transition-colors hover:border-[var(--accent-c)] hover:text-[var(--accent-c)]" aria-label="Ganti bahasa">
+                    <span id="langLabel">EN</span>
+                </button>
+                <button id="themeToggle" class="rounded border border-[var(--line-c)] p-2 text-[var(--fg-dim)] transition-colors hover:border-[var(--accent-c)] hover:text-[var(--accent-c)]" aria-label="Ganti tema terang/gelap">
+                    <svg class="icon-sun  h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button id="menuToggle" class="rounded border border-[var(--line-c)] p-2 md:hidden" aria-label="Buka menu" aria-expanded="false">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Nav mobile -->
+        <nav id="mobileMenu" class="hidden border-t border-[var(--line-c)] px-5 py-3 md:hidden" aria-label="Navigasi mobile">
+            <a href="#tentang"    class="mobile-link block py-2.5 text-sm font-medium text-[var(--fg-dim)]" data-id="Tentang"    data-en="About">Tentang</a>
+            <a href="#proyek"     class="mobile-link block py-2.5 text-sm font-medium text-[var(--fg-dim)]" data-id="Proyek"     data-en="Work">Proyek</a>
+            <a href="#perjalanan" class="mobile-link block py-2.5 text-sm font-medium text-[var(--fg-dim)]" data-id="Perjalanan" data-en="Journey">Perjalanan</a>
+            <a href="#kontak"     class="mobile-link block py-2.5 text-sm font-medium text-[var(--fg-dim)]" data-id="Kontak"     data-en="Contact">Kontak</a>
+        </nav>
+    </header>
+
+    <main id="konten">
+
+        <!-- ==================== HERO ==================== -->
+        <section class="mx-auto max-w-6xl px-5 pb-20 pt-16 md:pt-24">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-c)]">
+                Studio Kreatif Indie — Indonesia
+            </p>
+            <h1 class="mt-4 max-w-3xl font-display text-5xl leading-[1.05] md:text-7xl" data-id="Bercerita lewat karya, bukan klaim." data-en="Telling stories through craft, not claims.">
+                Bercerita lewat karya, bukan klaim.
+            </h1>
+            <p class="mt-6 max-w-xl text-[var(--fg-dim)]" data-id="Mahakam Moonlight Studio adalah wadah eksperimen kreatif satu orang: desain mekanika permainan, narasi yang menggugah imajinasi, dan aplikasi web yang benar-benar selesai dan dipakai." data-en="Mahakam Moonlight Studio is a one-person creative laboratory: game mechanic design, imagination-driven narratives, and web applications that actually ship and get used.">
+                Mahakam Moonlight Studio adalah wadah eksperimen kreatif satu orang: desain mekanika permainan, narasi yang menggugah imajinasi, dan aplikasi web yang benar-benar selesai dan dipakai.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3 no-print">
+                <a href="https://wa.me/62895385974104" target="_blank" rel="noopener noreferrer" class="rounded bg-[var(--fg)] px-5 py-2.5 text-sm font-semibold text-[var(--bg)] transition-opacity hover:opacity-85" data-id="Chat WhatsApp" data-en="Chat on WhatsApp">Chat WhatsApp</a>
+                <a href="https://github.com/mahakammoonlightstudio-beep" target="_blank" rel="noopener noreferrer" class="rounded border border-[var(--line-c)] px-5 py-2.5 text-sm font-semibold transition-colors hover:border-[var(--accent-c)] hover:text-[var(--accent-c)]">GitHub</a>
+            </div>
+
+            <p class="mt-10 border-t border-[var(--line-c)] pt-4 font-mono text-xs text-[var(--fg-dim)]">
+                <span data-id="Berdiri 2026" data-en="Est. 2026">Berdiri 2026</span> &nbsp;·&nbsp; <span data-id="4 proyek dirilis" data-en="4 projects shipped">4 proyek dirilis</span> &nbsp;·&nbsp; <span data-id="1 dalam pengerjaan" data-en="1 in progress">1 dalam pengerjaan</span>
+            </p>
+        </section>
+
+        <!-- ==================== TENTANG ==================== -->
+        <section id="tentang" class="border-t border-[var(--line-c)] bg-[var(--bg-soft)]">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="grid items-start gap-12 md:grid-cols-[300px_1fr]">
+                    <figure>
+                        <img src="founder-v2.png" alt="Founder Mahakam Moonlight Studio" width="300" height="380"
+                             class="w-full border border-[var(--line-c)] object-cover grayscale transition-all duration-500 hover:grayscale-0">
+                        <figcaption class="mt-2 font-mono text-[11px] text-[var(--fg-dim)]">founder.png — <span data-id="di balik semua proyek" data-en="behind every project">di balik semua proyek</span></figcaption>
+                    </figure>
+
+                    <div>
+                        <p class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-c)]" data-id="Tentang Kami" data-en="About Us">Tentang Kami</p>
+                        <h2 class="mt-4 font-display text-3xl md:text-4xl" data-id="Satu orang, banyak cerita." data-en="One person, many stories.">Satu orang, banyak cerita.</h2>
+                        <p class="mt-5 max-w-xl text-[var(--fg-dim)]" data-id="Studio ini berdiri sebagai ruang eksperimen tanpa tekanan pasar: membangun sistem permainan yang kompleks, menulis cerita yang hidup, dan merancang aplikasi web dari skema database sampai antarmuka terakhir." data-en="This studio exists as an experimentation space free from market pressure: building complex game systems, writing living stories, and designing web applications from the database schema to the final interface.">
+                            Studio ini berdiri sebagai ruang eksperimen tanpa tekanan pasar: membangun sistem permainan yang kompleks, menulis cerita yang hidup, dan merancang aplikasi web dari skema database sampai antarmuka terakhir.
+                        </p>
+                        <p class="mt-4 max-w-xl text-[var(--fg-dim)]" data-id="Semua proyek dikerjakan terbuka — kodenya bisa kamu lihat dan pelajari langsung di GitHub." data-en="Every project is built in the open — you can view and learn from the code directly on GitHub.">
+                            Semua proyek dikerjakan terbuka — kodenya bisa kamu lihat dan pelajari langsung di GitHub.
+                        </p>
+                        <a href="https://github.com/mahakammoonlightstudio-beep" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold hover:text-[var(--accent-c)]">
+                            <span data-id="Lihat organisasi GitHub" data-en="View GitHub organization">Lihat organisasi GitHub</span>
+                            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROYEK ==================== -->
+        <section id="proyek" class="border-t border-[var(--line-c)]">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="mb-10 flex items-baseline justify-between">
+                    <h2 class="font-display text-3xl md:text-4xl" data-id="Karya Studio" data-en="Studio Work">Karya Studio</h2>
+                    <span class="font-mono text-xs text-[var(--fg-dim)]">2025 — 2026</span>
+                </div>
+
+                <ol class="divide-y divide-[var(--line-c)] border-y border-[var(--line-c)]">
+                    <!-- 01 -->
+                    <li class="reveal">
+                        <article class="group grid gap-2 py-6 transition-colors hover:bg-[var(--bg-soft)] md:grid-cols-[3rem_1fr_auto] md:items-baseline md:gap-6 md:px-4">
+                            <span class="font-mono text-xs text-[var(--fg-dim)]">01</span>
+                            <div>
+                                <h3 class="text-lg font-semibold">Mamoon-Forum</h3>
+                                <p class="mt-1 max-w-xl text-sm text-[var(--fg-dim)]" data-id="Forum komunitas bergaya Reddit dengan backend PHP murni — ruang bertukar pikiran yang santai bagi netizen Indonesia. Proyek terbesar yang sedang dikerjakan." data-en="A Reddit-style community forum on a pure PHP backend — a relaxed space for Indonesian netizens to exchange ideas. The biggest project in development.">
+                                    Forum komunitas bergaya Reddit dengan backend PHP murni — ruang bertukar pikiran yang santai bagi netizen Indonesia. Proyek terbesar yang sedang dikerjakan.
+                                </p>
+                                <p class="mt-2 font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]">PHP · MySQL · Community</p>
+                            </div>
+                            <div class="flex items-center gap-4 md:justify-end">
+                                <span class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]"><span class="h-1.5 w-1.5 rounded-full bg-[var(--fg-dim)]"></span><span data-id="Dikembangkan" data-en="WIP">Dikembangkan</span></span>
+                                <a href="https://github.com/mahakammoonlightstudio-beep" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold hover:text-[var(--accent-c)]" data-id="Pantau" data-en="Follow">Pantau
+                                    <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- 02 -->
+                    <li class="reveal">
+                        <article class="group grid gap-2 py-6 transition-colors hover:bg-[var(--bg-soft)] md:grid-cols-[3rem_1fr_auto] md:items-baseline md:gap-6 md:px-4">
+                            <span class="font-mono text-xs text-[var(--fg-dim)]">02</span>
+                            <div>
+                                <h3 class="text-lg font-semibold">Main Pintar</h3>
+                                <p class="mt-1 max-w-xl text-sm text-[var(--fg-dim)]" data-id="Platform kuis edukasi dengan autentikasi pengguna, papan peringkat, dan dukungan PWA — dibangun agar belajar terasa seru dan kompetitif." data-en="An educational quiz platform with user authentication, leaderboards, and PWA support — built to make learning feel fun and competitive.">
+                                    Platform kuis edukasi dengan autentikasi pengguna, papan peringkat, dan dukungan PWA — dibangun agar belajar terasa seru dan kompetitif.
+                                </p>
+                                <p class="mt-2 font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]">PHP · MySQL · PWA</p>
+                            </div>
+                            <div class="flex items-center gap-4 md:justify-end">
+                                <span class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[var(--accent-c)]"><span class="h-1.5 w-1.5 rounded-full bg-[var(--accent-c)]"></span><span data-id="Aktif" data-en="Active">Aktif</span></span>
+                                <a href="https://github.com/mahakammoonlightstudio-beep" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold hover:text-[var(--accent-c)]" data-id="Kode" data-en="Code">Kode
+                                    <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- 03 -->
+                    <li class="reveal">
+                        <article class="group grid gap-2 py-6 transition-colors hover:bg-[var(--bg-soft)] md:grid-cols-[3rem_1fr_auto] md:items-baseline md:gap-6 md:px-4">
+                            <span class="font-mono text-xs text-[var(--fg-dim)]">03</span>
+                            <div>
+                                <h3 class="text-lg font-semibold">Suara SMK</h3>
+                                <p class="mt-1 max-w-xl text-sm text-[var(--fg-dim)]" data-id="Sistem voting online untuk lingkungan sekolah: panel admin, manajemen kandidat, rekapitulasi real-time, dan mode offline lewat service worker." data-en="An online voting system for schools: admin panel, candidate management, real-time recapitulation, and an offline mode via service worker.">
+                                    Sistem voting online untuk lingkungan sekolah: panel admin, manajemen kandidat, rekapitulasi real-time, dan mode offline lewat service worker.
+                                </p>
+                                <p class="mt-2 font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]">PHP · MySQL · Offline-first</p>
+                            </div>
+                            <div class="flex items-center gap-4 md:justify-end">
+                                <span class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[var(--accent-c)]"><span class="h-1.5 w-1.5 rounded-full bg-[var(--accent-c)]"></span><span data-id="Produksi" data-en="Production">Produksi</span></span>
+                                <a href="https://github.com/mahakammoonlightstudio-beep" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold hover:text-[var(--accent-c)]" data-id="Kode" data-en="Code">Kode
+                                    <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- 04 -->
+                    <li class="reveal">
+                        <article class="group grid gap-2 py-6 transition-colors hover:bg-[var(--bg-soft)] md:grid-cols-[3rem_1fr_auto] md:items-baseline md:gap-6 md:px-4">
+                            <span class="font-mono text-xs text-[var(--fg-dim)]">04</span>
+                            <div>
+                                <h3 class="text-lg font-semibold">Alasandong<span class="text-[var(--fg-dim)]">.my.id</span></h3>
+                                <p class="mt-1 max-w-xl text-sm text-[var(--fg-dim)]" data-id="Blog pribadi bilingual berisi cerita, opini, dan refleksi — dengan i18n penuh, tema ganda, dan SEO teknis yang rapi." data-en="A bilingual personal blog of stories, opinions, and reflections — with full i18n, dual themes, and clean technical SEO.">
+                                    Blog pribadi bilingual berisi cerita, opini, dan refleksi — dengan i18n penuh, tema ganda, dan SEO teknis yang rapi.
+                                </p>
+                                <p class="mt-2 font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]">HTML · i18n · PWA</p>
+                            </div>
+                            <div class="flex items-center gap-4 md:justify-end">
+                                <span class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[var(--accent-c)]"><span class="h-1.5 w-1.5 rounded-full bg-[var(--accent-c)]"></span><span data-id="Tayang" data-en="Live">Tayang</span></span>
+                                <a href="https://alasandong.my.id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold hover:text-[var(--accent-c)]" data-id="Kunjungi" data-en="Visit">Kunjungi
+                                    <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ==================== PERJALANAN ==================== -->
+        <section id="perjalanan" class="border-t border-[var(--line-c)] bg-[var(--bg-soft)]">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <h2 class="font-display text-3xl md:text-4xl" data-id="Jejak di Balik Cahaya Bulan" data-en="The Trail Behind the Moonlight">Jejak di Balik Cahaya Bulan</h2>
+
+                <div class="mt-10 grid gap-x-12 border-t border-[var(--line-c)] md:grid-cols-[8rem_1fr]">
+                    <div class="reveal border-b border-[var(--line-c)] py-5 font-mono text-xs uppercase tracking-wider text-[var(--fg-dim)]" data-id="Awal" data-en="Early days">Awal</div>
+                    <div class="reveal border-b border-[var(--line-c)] py-5">
+                        <h3 class="font-semibold" data-id="Studio lahir" data-en="The studio begins">Studio lahir</h3>
+                        <p class="mt-1 text-sm text-[var(--fg-dim)]" data-id="Mahakam Moonlight Studio dimulai sebagai wadah eksperimen kreatif — tempat mencurahkan ide game, cerita, dan kode tanpa batasan." data-en="Mahakam Moonlight Studio started as a creative experimentation space — a place to pour out game ideas, stories, and code without limits.">
+                            Mahakam Moonlight Studio dimulai sebagai wadah eksperimen kreatif — tempat mencurahkan ide game, cerita, dan kode tanpa batasan.
+                        </p>
+                    </div>
+
+                    <div class="reveal border-b border-[var(--line-c)] py-5 font-mono text-xs uppercase tracking-wider text-[var(--fg-dim)]" data-id="Eksplorasi" data-en="Exploration">Eksplorasi</div>
+                    <div class="reveal border-b border-[var(--line-c)] py-5">
+                        <h3 class="font-semibold" data-id="Aplikasi web nyata" data-en="Real web applications">Aplikasi web nyata</h3>
+                        <p class="mt-1 text-sm text-[var(--fg-dim)]" data-id="Lahir berbagai proyek: platform kuis edukasi, sistem voting sekolah, dan blog pribadi — masing-masing mengasah backend, database, hingga PWA." data-en="Various projects shipped: an educational quiz platform, a school voting system, and a personal blog — each sharpening backend, database, and PWA skills.">
+                            Lahir berbagai proyek: platform kuis edukasi, sistem voting sekolah, dan blog pribadi — masing-masing mengasah backend, database, hingga PWA.
+                        </p>
+                    </div>
+
+                    <div class="reveal border-b border-[var(--line-c)] py-5 font-mono text-xs uppercase tracking-wider text-[var(--fg-dim)]">Mei 2026</div>
+                    <div class="reveal border-b border-[var(--line-c)] py-5">
+                        <h3 class="font-semibold" data-id="Mamoon-Forum diumumkan" data-en="Mamoon-Forum announced">Mamoon-Forum diumumkan</h3>
+                        <p class="mt-1 text-sm text-[var(--fg-dim)]" data-id="Proyek terbesar sejauh ini resmi diumumkan: forum komunitas ala Reddit berbasis PHP untuk netizen Indonesia. Pengerjaan masih berlangsung." data-en="The biggest project so far was officially announced: a Reddit-style PHP community forum for Indonesian netizens. Development is ongoing.">
+                            Proyek terbesar sejauh ini resmi diumumkan: forum komunitas ala Reddit berbasis PHP untuk netizen Indonesia. Pengerjaan masih berlangsung.
+                        </p>
+                    </div>
+
+                    <div class="reveal py-5 font-mono text-xs uppercase tracking-wider text-[var(--fg-dim)]" data-id="Sekarang" data-en="Now">Sekarang</div>
+                    <div class="reveal py-5">
+                        <h3 class="font-semibold" data-id="Terus bergerak ke depan" data-en="Keeping moving forward">Terus bergerak ke depan</h3>
+                        <p class="mt-1 text-sm text-[var(--fg-dim)]" data-id="Fokus menyelesaikan Mamoon-Forum dan menelusuri ide-ide baru. Langit malam masih panjang, dan bulan masih terang." data-en="Focused on finishing Mamoon-Forum and exploring new ideas. The night sky is still long, and the moon is still bright.">
+                            Fokus menyelesaikan Mamoon-Forum dan menelusuri ide-ide baru. Langit malam masih panjang, dan bulan masih terang.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ ==================== -->
+        <section id="faq" class="border-t border-[var(--line-c)]">
+            <div class="mx-auto max-w-3xl px-5 py-16 md:py-24">
+                <h2 class="font-display text-3xl md:text-4xl" data-id="Pertanyaan yang Sering Diajukan" data-en="Frequently Asked Questions">Pertanyaan yang Sering Diajukan</h2>
+
+                <div class="mt-8 border-t border-[var(--line-c)]">
+                    <details class="faq group border-b border-[var(--line-c)]">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold">
+                            <span data-id="Apa itu Mahakam Moonlight Studio?" data-en="What is Mahakam Moonlight Studio?">Apa itu Mahakam Moonlight Studio?</span>
+                            <svg class="faq-chevron h-4 w-4 shrink-0 text-[var(--accent-c)] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </summary>
+                        <p class="pb-5 text-sm text-[var(--fg-dim)]" data-id="Studio kreatif indie satu orang yang berfokus pada pengembangan game, storytelling, dan aplikasi web. Semua proyek dikerjakan secara independen dan terbuka di GitHub." data-en="A one-person indie creative studio focused on game development, storytelling, and web applications. All projects are built independently and openly on GitHub.">
+                            Studio kreatif indie satu orang yang berfokus pada pengembangan game, storytelling, dan aplikasi web. Semua proyek dikerjakan secara independen dan terbuka di GitHub.
+                        </p>
+                    </details>
+
+                    <details class="faq group border-b border-[var(--line-c)]">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold">
+                            <span data-id="Bisa kolaborasi atau request proyek?" data-en="Can I collaborate or request a project?">Bisa kolaborasi atau request proyek?</span>
+                            <svg class="faq-chevron h-4 w-4 shrink-0 text-[var(--accent-c)] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </summary>
+                        <p class="pb-5 text-sm text-[var(--fg-dim)]" data-id="Selalu terbuka. Hubungi lewat WhatsApp untuk diskusi santai, atau email untuk penawaran yang lebih formal." data-en="Always open. Reach out on WhatsApp for casual discussions, or email for more formal offers.">
+                            Selalu terbuka. Hubungi lewat WhatsApp untuk diskusi santai, atau email untuk penawaran yang lebih formal.
+                        </p>
+                    </details>
+
+                    <details class="faq group border-b border-[var(--line-c)]">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold">
+                            <span data-id="Apa itu Mamoon-Forum?" data-en="What is Mamoon-Forum?">Apa itu Mamoon-Forum?</span>
+                            <svg class="faq-chevron h-4 w-4 shrink-0 text-[var(--accent-c)] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </summary>
+                        <p class="pb-5 text-sm text-[var(--fg-dim)]" data-id="Proyek terbaru studio — platform forum komunitas bergaya Reddit yang dibangun sepenuhnya dengan backend PHP, dirancang sebagai ruang diskusi santai bagi netizen Indonesia." data-en="The studio's latest project — a Reddit-style community forum built entirely with a PHP backend, designed as a casual discussion space for Indonesian netizens.">
+                            Proyek terbaru studio — platform forum komunitas bergaya Reddit yang dibangun sepenuhnya dengan backend PHP, dirancang sebagai ruang diskusi santai bagi netizen Indonesia.
+                        </p>
+                    </details>
+
+                    <details class="faq group border-b border-[var(--line-c)]">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold">
+                            <span data-id="Bagaimana cara mendukung studio?" data-en="How can I support the studio?">Bagaimana cara mendukung studio?</span>
+                            <svg class="faq-chevron h-4 w-4 shrink-0 text-[var(--accent-c)] transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </summary>
+                        <p class="pb-5 text-sm text-[var(--fg-dim)]" data-id="Dukungan terbaik: coba proyek-proyek kami, bagikan, atau beri bintang di GitHub. Donasi via SociaBuzz membantu biaya server dan pengembangan." data-en="Best ways to help: try our projects, share them, or star them on GitHub. Donations via SociaBuzz help cover server and development costs.">
+                            Dukungan terbaik: coba proyek-proyek kami, bagikan, atau beri bintang di GitHub. Donasi via SociaBuzz membantu biaya server dan pengembangan.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== DUKUNGAN ==================== -->
+        <section id="dukungan" class="border-t border-[var(--line-c)] bg-[var(--bg-soft)]">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <div class="grid items-start gap-8 border border-[var(--line-c)] bg-[var(--card-c)] p-8 md:grid-cols-[1fr_auto] md:p-10">
+                    <div>
+                        <p class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-c)]" data-id="Dukungan" data-en="Support">Dukungan</p>
+                        <h2 class="mt-3 font-display text-2xl md:text-3xl" data-id="Biaya server tidak membiayai dirinya sendiri." data-en="Server bills don't pay themselves.">Biaya server tidak membiayai dirinya sendiri.</h2>
+                        <p class="mt-3 max-w-xl text-sm text-[var(--fg-dim)]" data-id="Setiap donasi dipakai untuk biaya operasional server, pengembangan website, dan riset proyek indie seperti Mamoon-Forum. Bukan donasi? Coba proyeknya, pakai, dan bagikan — itu juga dukungan." data-en="Every donation goes to server costs, website development, and research for indie projects like Mamoon-Forum. Can't donate? Try the projects, use them, share them — that counts too.">
+                            Setiap donasi dipakai untuk biaya operasional server, pengembangan website, dan riset proyek indie seperti Mamoon-Forum. Bukan donasi? Coba proyeknya, pakai, dan bagikan — itu juga dukungan.
+                        </p>
+                    </div>
+                    <a href="https://sociabuzz.com/mahakam_moonlight_studio/tribe" target="_blank" rel="noopener noreferrer"
+                       class="no-print self-start justify-self-start rounded bg-[var(--accent-c)] px-5 py-2.5 text-sm font-semibold text-[#14151d] transition-opacity hover:opacity-85 md:justify-self-end md:self-center"
+                       data-id="Dukung via SociaBuzz" data-en="Support via SociaBuzz">
+                        Dukung via SociaBuzz
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== KONTAK ==================== -->
+        <section id="kontak" class="border-t border-[var(--line-c)]">
+            <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-c)]" data-id="Kontak" data-en="Contact">Kontak</p>
+                <h2 class="mt-4 max-w-2xl font-display text-3xl md:text-4xl" data-id="Ingin berkolaborasi? Sapa saja." data-en="Want to collaborate? Just say hi.">Ingin berkolaborasi? Sapa saja.</h2>
+                <p class="mt-4 max-w-xl text-[var(--fg-dim)]" data-id="Balasan tercepat lewat WhatsApp. Email tersedia untuk hal-hal yang lebih formal." data-en="Fastest reply is on WhatsApp. Email is available for more formal matters.">
+                    Balasan tercepat lewat WhatsApp. Email tersedia untuk hal-hal yang lebih formal.
+                </p>
+
+                <div class="mt-10 grid gap-4 md:grid-cols-2">
+                    <a href="https://wa.me/62895385974104" target="_blank" rel="noopener noreferrer"
+                       class="group flex items-center justify-between border border-[var(--line-c)] bg-[var(--card-c)] px-6 py-5 transition-colors hover:border-[var(--accent-c)] reveal">
+                        <div>
+                            <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]">WhatsApp</p>
+                            <p class="mt-1 font-semibold">+62 895-3859-74104</p>
+                        </div>
+                        <svg class="h-5 w-5 text-[var(--fg-dim)] transition-all group-hover:translate-x-0.5 group-hover:text-[var(--accent-c)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                    </a>
+
+                    <div class="flex items-center justify-between border border-[var(--line-c)] bg-[var(--card-c)] px-6 py-5 reveal">
+                        <div class="min-w-0">
+                            <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--fg-dim)]">Email</p>
+                            <a href="mailto:mahakammoonlightstudio@gmail.com" class="mt-1 block truncate font-semibold hover:text-[var(--accent-c)]">mahakammoonlightstudio@gmail.com</a>
+                        </div>
+                        <button id="copyEmailBtn" class="ml-3 shrink-0 rounded border border-[var(--line-c)] p-2 text-[var(--fg-dim)] transition-colors hover:border-[var(--accent-c)] hover:text-[var(--accent-c)]" aria-label="Salin alamat email">
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-6 text-sm no-print">
+                    <a href="https://github.com/mahakammoonlightstudio-beep" target="_blank" rel="noopener noreferrer" class="nav-underline font-medium text-[var(--fg-dim)] hover:text-[var(--fg)]">GitHub</a>
+                    <a href="https://alasandong.my.id" target="_blank" rel="noopener noreferrer" class="nav-underline font-medium text-[var(--fg-dim)] hover:text-[var(--fg)]">Blog</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-[var(--line-c)]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-[var(--fg-dim)] md:flex-row md:items-center md:justify-between">
+            <p>&copy; <span id="footerYear"></span> Mahakam Moonlight Studio — <span data-id="Hak cipta dilindungi." data-en="All rights reserved.">Hak cipta dilindungi.</span></p>
+            <p class="font-mono text-xs" data-id="Dibuat dengan cinta di bawah cahaya bulan · Hosted on InfinityFree" data-en="Made with love under the moonlight · Hosted on InfinityFree">Dibuat dengan cinta di bawah cahaya bulan · Hosted on InfinityFree</p>
+        </div>
+    </footer>
+
+    <!-- ==================== POPUP BAHASA ==================== -->
+    <div class="lang-popup-overlay fixed inset-0 z-50 hidden items-center justify-center bg-black/45 p-5 backdrop-blur-sm" id="langPopup" role="dialog" aria-modal="true" aria-labelledby="langPopupTitle">
+        <div class="w-full max-w-sm border border-[var(--line-c)] bg-[var(--bg)] p-8 text-center">
+            <h3 id="langPopupTitle" class="font-display text-2xl" data-id="Pilih Bahasa" data-en="Choose Language">Pilih Bahasa</h3>
+            <p class="mt-2 text-sm text-[var(--fg-dim)]" data-id="Situs ini juga tersedia dalam Bahasa Inggris. Ganti sekarang?" data-en="This site is also available in Indonesian. Switch now?">Situs ini juga tersedia dalam Bahasa Inggris. Ganti sekarang?</p>
+            <div class="mt-6 flex flex-col gap-2 sm:flex-row">
+                <button class="flex-1 rounded border border-[var(--line-c)] px-4 py-2.5 text-sm font-semibold transition-colors hover:border-[var(--accent-c)]" id="langKeepId" data-id="Tetap Indonesia" data-en="Stay in Indonesian">Tetap Indonesia</button>
+                <button class="flex-1 rounded bg-[var(--fg)] px-4 py-2.5 text-sm font-semibold text-[var(--bg)] transition-opacity hover:opacity-85" id="langSwitchEn" data-id="Switch to English" data-en="Switch to English">Switch to English</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-3 border border-[var(--line-c)] bg-[var(--fg)] px-4 py-2.5 text-sm font-medium text-[var(--bg)] opacity-0 shadow-lg transition-all duration-300" role="status" aria-live="polite">
+        <span id="toastText"></span>
+    </div>
+
+    <script>
+        "use strict";
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // ============ TEMA (gelap = identitas bawaan) ============
+        function applyTheme(dark) {
+            document.documentElement.classList.toggle("dark", dark);
+            localStorage.setItem("mms-theme", dark ? "dark" : "light");
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", dark ? "#14151d" : "#f5f4ef");
+        }
+
+        document.getElementById("themeToggle").addEventListener("click", () => {
+            applyTheme(!document.documentElement.classList.contains("dark"));
+        });
+
+        // ============ BAHASA (ID/EN) + POPUP PERTAMA ============
+        const LANG_KEY = "mms-lang";
+        let currentLang = localStorage.getItem(LANG_KEY) || "id";
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem(LANG_KEY, lang);
+            document.documentElement.lang = lang;
+
+            const swap = document.querySelectorAll("[data-id]");
+            swap.forEach((el) => el.classList.add("switching"));
+
+            setTimeout(() => {
+                swap.forEach((el) => {
+                    const text = el.getAttribute("data-" + lang);
+                    if (text) el.innerHTML = text;
+                });
+                document.getElementById("langLabel").textContent = lang === "id" ? "EN" : "ID";
+                swap.forEach((el) => el.classList.remove("switching"));
+            }, 180);
+        }
+
+        document.getElementById("langToggle").addEventListener("click", () => {
+            setLanguage(currentLang === "id" ? "en" : "id");
+        });
+
+        // Popup hanya muncul sekali untuk pengunjung non-Indonesia
+        const langPopup = document.getElementById("langPopup");
+
+        function showLangPopup() {
+            langPopup.classList.remove("hidden");
+            langPopup.classList.add("flex");
+        }
+        function hideLangPopup() {
+            langPopup.classList.add("hidden");
+            langPopup.classList.remove("flex");
+        }
+
+        if (!localStorage.getItem(LANG_KEY)) {
+            const browserLang = (navigator.language || "").toLowerCase();
+            if (!browserLang.startsWith("id")) {
+                setTimeout(showLangPopup, 900);
+            } else {
+                localStorage.setItem(LANG_KEY, "id"); // tandai sudah memilih
+            }
+        }
+
+        document.getElementById("langSwitchEn").addEventListener("click", () => {
+            hideLangPopup();
+            setLanguage("en");
+        });
+        document.getElementById("langKeepId").addEventListener("click", () => {
+            hideLangPopup();
+            localStorage.setItem(LANG_KEY, "id");
+        });
+        langPopup.addEventListener("click", (e) => {
+            if (e.target === e.currentTarget) hideLangPopup();
+        });
+
+        // ============ MENU MOBILE ============
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add("hidden");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const open = mobileMenu.classList.toggle("hidden") === false;
+            menuToggle.setAttribute("aria-expanded", String(open));
+        });
+        document.querySelectorAll(".mobile-link").forEach((link) =>
+            link.addEventListener("click", closeMobileMenu)
+        );
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                hideLangPopup();
+                closeMobileMenu();
+            }
+        });
+
+        // ============ REVEAL ON SCROLL ============
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+        );
+        document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+        // ============ SCROLLSPY ============
+        const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+        const sections = [...navLinks]
+            .map((a) => document.querySelector(a.getAttribute("href")))
+            .filter(Boolean);
+
+        const spyObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach((a) => {
+                        const on = a.getAttribute("href") === "#" + entry.target.id;
+                        if (on) a.setAttribute("aria-current", "true");
+                        else a.removeAttribute("aria-current");
+                    });
+                });
+            },
+            { rootMargin: "-40% 0px -55% 0px" }
+        );
+        sections.forEach((s) => spyObserver.observe(s));
+
+        // ============ SALIN EMAIL + TOAST ============
+        const toast = document.getElementById("toast");
+        const toastText = document.getElementById("toastText");
+        let toastTimer;
+
+        function showToast(msg) {
+            toastText.textContent = msg;
+            toast.classList.remove("opacity-0", "translate-y-3");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.add("opacity-0", "translate-y-3"), 2200);
+        }
+
+        document.getElementById("copyEmailBtn").addEventListener("click", async () => {
+            const email = "mahakammoonlightstudio@gmail.com";
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch {
+                const ta = document.createElement("textarea");
+                ta.value = email;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand("copy");
+                ta.remove();
+            }
+            showToast(currentLang === "id" ? "Email disalin" : "Email copied");
+        });
+
+        // ============ TAHUN FOOTER ============
+        document.getElementById("footerYear").textContent = new Date().getFullYear();
+
+        // ============ SERVICE WORKER (PWA) ============
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("sw.js").catch(() => {
+                    /* offline support opsional — gagal diam saja */
+                });
+            });
+        }
+
+        // ============ INIT ============
+        if (currentLang !== "id") setLanguage(currentLang);
+    </script>
+</body>
+</html>

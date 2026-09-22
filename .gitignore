@@ -1,0 +1,5 @@
+node_modules/
+package-lock.json
+
+# File verifikasi Google Search Console (tidak perlu ada di repo)
+google*.html

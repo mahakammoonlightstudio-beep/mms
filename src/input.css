@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palet editorial "moonlight" — flat, hangat, tanpa gradient */
+  --color-ink: #14151d;        /* latar gelap utama */
+  --color-ink-soft: #1c1d27;   /* kartu / section selang-seling */
+  --color-paper: #f5f4ef;      /* latar terang utama */
+  --color-paper-soft: #edece5; /* kartu terang */
+  --color-dim: #6e6d64;
+  --color-dim-dark: #a4a399;   /* teks sekunder di tema gelap */
+  --color-line: #e2e0d6;
+  --color-line-dark: #2b2c38;
+  --color-gold: #b08d3e;       /* aksen emas bulan — tema terang */
+  --color-gold-dark: #d4b26a;  /* aksen emas — tema gelap */
+  --color-wa: #1d9e57;
+
+  --font-sans: "Quicksand", system-ui, sans-serif;
+  --font-display: "Patrick Hand", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --bg: var(--color-paper);
+  --bg-soft: var(--color-paper-soft);
+  --fg: var(--color-ink);
+  --fg-dim: var(--color-dim);
+  --line-c: var(--color-line);
+  --accent-c: var(--color-gold);
+  --card-c: #ffffff;
+}
+
+html.dark {
+  --bg: var(--color-ink);
+  --bg-soft: var(--color-ink-soft);
+  --fg: var(--color-paper);
+  --fg-dim: var(--color-dim-dark);
+  --line-c: var(--line-dark);
+  --accent-c: var(--color-gold-dark);
+  --card-c: #1f202b;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Identitas MMS: judul tangan-written, bukan gradient text */
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--accent-c);
+  color: #14151d;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-c);
+  outline-offset: 3px;
+}
+
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1.5px;
+  width: 0;
+  background: var(--accent-c);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-underline:hover::after,
+.nav-underline[aria-current="true"]::after {
+  width: 100%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.lang-swap {
+  transition: opacity 0.18s ease;
+}
+.lang-swap.switching {
+  opacity: 0;
+}
+
+.theme-icon {
+  transition: opacity 0.2s ease;
+}
+html.dark .icon-sun { display: block; }
+html.dark .icon-moon { display: none; }
+html:not(.dark) .icon-sun { display: none; }
+html:not(.dark) .icon-moon { display: block; }
+
+/* FAQ pakai <details> native — tanpa JS */
+details.faq[open] .faq-chevron {
+  transform: rotate(90deg);
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff !important; color: #111 !important; }
+  section { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  a { color: #111 !important; text-decoration: none; }
+}
