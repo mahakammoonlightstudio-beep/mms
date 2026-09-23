@@ -2,7 +2,7 @@
  * Mahakam Moonlight Studio — Service Worker
  * Network-first dengan cache fallback (konten selalu segar, tetap bisa offline).
  */
-const CACHE_NAME = "mms-v3";
+const CACHE_NAME = "mms-v3.1";
 const CORE_ASSETS = [
   "./",
   "./index.html",

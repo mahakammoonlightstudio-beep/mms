@@ -1,0 +1,15 @@
+Mahakam Moonlight Studio kini punya rumah digital baru - dengan scene 3D bulan yang dibangun murni dari canvas API.
+
+Mahakam Moonlight Studio adalah studio kreatif indie satu orang dari Tenggarong, Kalimantan Timur. Situs resminya baru saja menjalani remake menyeluruh:
+
+- Scene 3D bulan dengan kawah prosedural dan terminator bayangan realistis - tanpa Three.js, tanpa WebGL, murni canvas 2D
+- Bintang berkelip dengan paralaks dan shooting star acak
+- Transisi tema terang-gelap yang halus, scroll-reveal, tilt kartu, dan toggle bahasa tanpa reload
+- PWA penuh dan dwibahasa Indonesia-Inggris
+
+Di situs yang sama, Anda bisa melihat semua karya studio: forum komunitas, aplikasi untuk instansi pemerintah daerah, sekolah, dan karya kreatif lainnya.
+
+Kunjungi: https://mahakam-moonlight-studio.page.gd/
+Kode: https://github.com/mahakammoonlightstudio-beep/mms
+
+#WebDevelopment #Canvas3D #IndieStudio #Bootstrap #CreativeCoding
