@@ -1,66 +1,63 @@
 # Mahakam Moonlight Studio
 
-> Situs resmi **Mahakam Moonlight Studio** — Tempat Imajinasi Mengalir.
-> Statis, dibangun dengan **Tailwind CSS v4**, dwibahasa (ID/EN), dan PWA-ready.
+Situs resmi Mahakam Moonlight Studio - tempat imajinasi mengalir. Sepenuhnya statis, dibangun dengan Tailwind CSS v4, dwibahasa Indonesia/Inggris, dan siap dipasang sebagai PWA.
 
-🌐 **Situs studio:** https://mahakam-moonlight-studio.page.gd/
+**Live: <https://mahakam-moonlight-studio.page.gd/>**
 
-## ✨ Fitur
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8) ![PWA](https://img.shields.io/badge/PWA-ready-5a0fc8)
 
-- **Karya Studio** — portofolio proyek (PHP · MySQL · PWA · i18n, dsb.).
-- **Dwibahasa ID / EN** — teks ditandai atribut `data-id` / `data-en`, ditukar tanpa reload.
-- **Cerita & FAQ** — profil studio dan pertanyaan yang sering diajukan.
-- **PWA** — installable & offline-ready (`site.webmanifest` + `sw.js`).
-- **Statis & cepat** — satu file CSS hasil build Tailwind yang sudah di-minify, tanpa framework JS.
+## Fitur
 
-## 🛠️ Teknologi
+- **Karya Studio** - portofolio proyek (PHP, MySQL, PWA, i18n, dan lainnya).
+- **Dwibahasa Indonesia / Inggris** - teks ditandai atribut `data-id` / `data-en`, ditukar tanpa reload.
+- **Cerita dan FAQ** - profil studio dan pertanyaan yang sering diajukan.
+- **PWA** - dapat dipasang dan berfungsi offline melalui manifest dan service worker.
+- **Statis dan cepat** - satu berkas CSS hasil build Tailwind yang sudah di-minify, tanpa framework JavaScript.
 
-- HTML5 + Tailwind CSS v4 (`@tailwindcss/cli`)
-- Vanilla JavaScript
-- Service Worker + Web App Manifest (PWA)
+## Persyaratan
 
-## 🚀 Development
+- Node.js 18 atau lebih baru (hanya untuk development)
 
-Butuh [Node.js](https://nodejs.org/).
+## Development
 
 ```bash
-# Install dependensi
+# Pasang dependensi
 npm install
 
-# Mode watch — CSS di-rebuild otomatis saat src/input.css berubah
+# Mode watch - CSS dibangun ulang otomatis saat src/input.css berubah
 npm run watch:css
 
-# Build produksi — minify CSS ke assets/css/main.css
+# Build produksi - minify CSS ke assets/css/main.css
 npm run build
 ```
 
-Hasil build sudah di-commit, jadi situs bisa dibuka langsung tanpa build ulang.
+Hasil build sudah di-commit, sehingga situs dapat dibuka langsung tanpa membangun ulang.
 
-## 📁 Struktur
+## Struktur Proyek
 
 ```
 MMS/
 ├── index.html           # Halaman utama (single page)
 ├── src/input.css        # Sumber Tailwind CSS
-├── assets/css/main.css  # Hasil build (committed)
+├── assets/css/main.css  # Hasil build (di-commit)
 ├── site.webmanifest     # Manifest PWA
 ├── sw.js                # Service worker
 └── package.json
 ```
 
-## ☁️ Deploy
+## Deploy
 
-100% statis — hosting di mana saja (GitHub Pages, Netlify, shared hosting).
+Situs ini sepenuhnya statis dan dapat di-hosting di mana saja (GitHub Pages, Netlify, shared hosting).
 
-> Catatan: file verifikasi Google Search Console (`google*.html`) dikecualikan dari repo lewat `.gitignore` — tambahkan langsung di server jika perlu verifikasi ulang.
+Catatan: berkas verifikasi Google Search Console (`google*.html`) dikecualikan dari repositori lewat `.gitignore`; tambahkan langsung di server bila perlu verifikasi ulang.
 
-## 🔗 Tautan
+## Tautan
 
-- 🌐 Situs studio: https://mahakam-moonlight-studio.page.gd/
-- 💼 LinkedIn: https://www.linkedin.com/in/muhammad-fauzan-raffa-al-habsy-369628411/
-- ▶️ YouTube: https://www.youtube.com/@MahakamMoonlightStudio
-- 𝕏 X (Twitter): https://x.com/MahakamMoocb
+- Situs studio: <https://mahakam-moonlight-studio.page.gd/>
+- LinkedIn: <https://www.linkedin.com/in/muhammad-fauzan-raffa-al-habsy-369628411/>
+- YouTube: <https://www.youtube.com/@MahakamMoonlightStudio>
+- X (Twitter): <https://x.com/MahakamMoocb>
 
----
+## Lisensi
 
-Hak cipta © 2026 **Mahakam Moonlight Studio** · mahakammoonlightstudio@gmail.com
+Hak cipta 2026 Mahakam Moonlight Studio.
