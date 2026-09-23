@@ -4,7 +4,7 @@ Situs resmi Mahakam Moonlight Studio - tempat imajinasi mengalir. Sepenuhnya sta
 
 **Live: <https://mahakam-moonlight-studio.page.gd/>**
 
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8) ![PWA](https://img.shields.io/badge/PWA-ready-5a0fc8)
+![License](https://img.shields.io/badge/License-CC%20BY%204.0-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8) ![PWA](https://img.shields.io/badge/PWA-ready-5a0fc8)
 
 ## Fitur
 
