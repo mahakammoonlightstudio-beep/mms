@@ -60,4 +60,4 @@ Catatan: berkas verifikasi Google Search Console (`google*.html`) dikecualikan d
 
 ## Lisensi
 
-Hak cipta 2026 Mahakam Moonlight Studio.
+Didistribusikan di bawah [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). Bebas digunakan dan dimodifikasi selama mencantumkan kredit kepada Mahakam Moonlight Studio.
